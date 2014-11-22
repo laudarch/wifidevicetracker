@@ -11,7 +11,7 @@ require "solareventcalculator"
 
 
 begin
-
+	# load config
 	@config = Conf.new( "#{@path}/config.json" )
 	log = Chan.new
 
