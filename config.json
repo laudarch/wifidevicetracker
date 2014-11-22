@@ -1,0 +1,14 @@
+{
+	"lat_lon"	: ["54.325277777778","10.1405555555565"],
+	"sleeptime" : 3,
+	"timeout"	: 2,
+	"mobiles"	: ["malte-Handy","malte-Tablet"],
+	"computers"	: ["malte-Notebook"],
+	"others"	: [],
+	"rules" 	: [{ "if"	: "all_offline",
+					 "then" : "sudo /usr/local/sbin/send443 11111 1 0 && sudo /usr/local/sbin/send443 11111 2 0 && sudo /usr/local/sbin/send443 11111 4 0 && sudo /usr/local/sbin/send443 11111 3 0" 
+				   },
+				   { "if"	: "arriving AND night",
+					 "then" : "sudo /usr/local/sbin/send443 11111 1 1 && sudo /usr/local/sbin/send443 11111 4 1" 
+				   }]
+}
